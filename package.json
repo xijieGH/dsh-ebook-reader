@@ -1,0 +1,73 @@
+{
+  "name": "dsh-ebook-reader",
+  "version": "1.0.0",
+  "description": "EPUB e-book reader with a local bookshelf for the DeepSeek Harness left sidebar.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "xijieGH",
+    "url": "https://github.com/xijieGH"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xijieGH/dsh-ebook-reader.git"
+  },
+  "homepage": "https://github.com/xijieGH/dsh-ebook-reader",
+  "bugs": {
+    "url": "https://github.com/xijieGH/dsh-ebook-reader/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "epub",
+    "ebook",
+    "ebook-reader",
+    "bookshelf"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "test": "node test/host.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.1+": "compatible"
+      }
+    }
+  }
+}

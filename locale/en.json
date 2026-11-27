@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "E-book reader",
+    "description": "Adds an e-book reader to the left sidebar. Open the E-books entry to import EPUB files, keep a bookshelf on this machine, and read with a table of contents, saved reading positions, adjustable text size and reading themes. Books stay on this computer; DRM-protected EPUB files cannot be opened.",
+    "detail": "docs/DETAIL.md"
+  }
+}

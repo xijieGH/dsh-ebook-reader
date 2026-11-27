@@ -1,0 +1,5 @@
+# Bundle patch: the Host half serves the local bookshelf API, the `dsh.client`
+# declaration in package.json loads the sidebar panel in the browser.
+- insert:
+    - id: ebook-reader
+      name: dsh-ebook-reader
